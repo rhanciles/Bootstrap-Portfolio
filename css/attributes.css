@@ -1,0 +1,23 @@
+:root {
+    /* Set default colours */
+    --PriColour: #5a4568;
+    --SecColour: #95A6C2;
+    --AltColour: #293EA1;
+    --NavColour: #c49796;
+    --TxtColour: #1E2846;
+    --BkgColour: #DCE1EB;
+
+    /* Test standard values */
+    --txtsize: 1em;
+    --txtscale: 1.2em;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--BkgColour);  
+}
