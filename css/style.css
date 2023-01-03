@@ -21,6 +21,8 @@ h6 {
   text-transform: capitalize;
 }
 
+/* Removed background from animated text */
+
 .jumbotron {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -75,11 +77,9 @@ h6 {
 
 
 /* NAVIGATION immediatly after the headers with sticky top effect from bootstrap */
+
 nav {
   width: 100%;
-  /* background: #fff; */
-  /* opacity: 0.9; */
-  /* padding: 1em 0; */
   box-shadow: 0 0.2rem 0 var(--TxtColour);
 }
 
@@ -104,9 +104,10 @@ nav {
   position: absolute;
   content: " ";
   height: 100%;
-	width: 20%;
+	width: 25%;
   z-index: -1;
   top: 0;
+  left: 0;
   display: flex;
   justify-content: flex-start;
   background-color: inherit;
@@ -117,7 +118,7 @@ nav ul {
   list-style: none;
   text-align: center;
   margin-bottom: 0em !important;
-  margin-right: 2em;
+  padding-left: 0;
 }
 nav ul li {
   display: inline-block;
@@ -137,12 +138,6 @@ nav ul li a:before {
 transition: all 1s;
 }
 
-/* nav ul li a:hover {
-  color: #555;
-} */
-
-/* stroke fill effect */
-
 nav.fill ul li a {
   position: relative;
 }
@@ -156,20 +151,8 @@ nav.fill ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  /* background: #aaa; */
   height: 1px;
 }
-
-/* nav.fill ul li a {
-  transition: all 1s;
-} */
-
-/* nav.fill ul li a:after {
-  text-align: left;
-  content: '.';
-  margin: 0;
-  opacity: 0;
-} */
 
 nav.fill ul li a:hover {
   color: var(--Highlight);
@@ -180,7 +163,6 @@ nav.fill ul li a:hover:after {
   z-index: -10;
   animation: fill 1s forwards;
   -webkit-animation: fill 0.6s forwards;
-  /* -moz-animation: fill 1s forwards; */
   opacity: 1;
 }
 
@@ -203,40 +185,7 @@ nav.fill ul li a:hover:after {
 
 /* End of Nav animation */
 
-
-/* p {
-  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
-} */
-
-
-.mb-3 {
-  margin-bottom: 1.7em !important;
-}
-
-.CV {
-  background-color: #a1949427;
-  margin-top: 1.7em;
-}
-
-.about {
-  margin-top: 1.7em;
-  display: inline-block
-}
-
-.about .card-title {
-  position: relative;
-  margin-left: 6.5em;
-  margin-top: -6em;
-}
-
-.about p {
-  margin-left: 12em;
-}
-
-.about img {
-  height: 10em;
-  border-radius: 50%;
-}
+/* Buttons for the work/Profile area */
 
 .btn-one {
   color: #fff;
@@ -281,10 +230,52 @@ nav.fill ul li a:hover:after {
   padding-right: 1.5em;
 }
 
+/* End of Work area */
+
+/* Adjustments to About Me section */
+
+.mb-3 {
+  margin-bottom: 1.7em !important;
+}
+
+.CV {
+  background-color: #a1949427;
+  margin-top: 1.7em;
+}
+
+.about {
+  margin-top: 1.7em;
+  display: inline-block
+}
+
+.about .card-title {
+  position: relative;
+  margin-left: 6.5em;
+  margin-top: -6em;
+}
+
+.about p {
+  margin-left: 12em;
+}
+
+.about img {
+  height: 10em;
+  border-radius: 50%;
+}
+
+/* End of About Me section */
+
+
+/* Bootstrap Tab Navigation used for skills section */
+
 .tab-content {
   margin-top: 1em;
   margin-right: 1em;
 }
+
+/* End of Tab Navigation */
+
+/* Various ajustments to the footer area */
 
 footer {
   margin-top: -2em;
@@ -308,16 +299,30 @@ input {
   background-color: var(--SecColour);
 }
 
-span ul {
+.social-end {
+  display: flex;
+  margin: 0 1.5em 0 0;
+  gap: 2em;
+}
+
+.txt-fix {
+  margin-left: -1.3em;
+}
+
+span ul li:last-child {
+  margin-top: 0.5em;
+}
+
+footer ul {
   list-style: none;
   color: var(--NavColour);
 }
 
-span li a {
+footer li a {
   color: var(--AltColour);
 }
 
-span li a:hover {
+footer li a:hover {
   color: var(--Highlight);
 }
 
