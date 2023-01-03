@@ -5,7 +5,7 @@
     --AltColour: #293EA1;
     --Highlight: #ffea8b;
     --TxtColour: #1E2846;
-    --BkgColour: #95A6C2;
+    --BkgColour: #f3f0f0;
     --NavColour: #ffffff;
     --BoxShadow: #5a456813;
     --CrdColour: #c497963b;
@@ -23,10 +23,11 @@ body {
   background-color: var(--BkgColour);  
 }
 
-main,
-footer {
+main {
     margin: 5% 10%;
 }
+
+/* Bootstrap cards and buttons */
 
 .card {
     box-shadow: inset 0 -3em 3em var(--BoxShadow), 0 0 0 2px rgb(255, 255, 255),
@@ -34,16 +35,22 @@ footer {
     color: var(--PriColour);
 }
 
+.tab-content {
+    color: var(--PriColour);
+    font-size: medium;
+}
+
 .card-title {
     font-size: x-large;
 }
 
 .card-text {
-    font-size: small;
+    font-size: medium;
 }
 
-.card-footer {
-    margin-left: 6em;
+.card-footer,
+.card-header {
+    margin-left: 3em;
     background-color: var(--CrdColour);
 }
 
@@ -51,4 +58,39 @@ footer {
     color: var(--PriColour) !important;
     font-style: italic;
     font-size: medium;
+    padding-left: 4.5em;
 }
+
+.txt-end {
+    color: var(--PriColour) !important;
+    font-style: italic;
+    font-size: medium;
+    padding-left: 4.4em;
+}
+
+.txt-fix {
+    margin-left: -1.3em;
+}
+
+.btn:hover {
+    background-color: var(--SecColour);
+    border-color: #997675;
+    box-shadow: 0.2em 0.2em 0.5em var(--PriColour);
+}
+
+.btn:active {
+    background-color: var(--SecColour) !important;
+    border-color: #997675 !important;
+}
+
+button:hover {
+    background-color: var(--SecColour);
+    /* border-color: #997675;
+    box-shadow: 0.2em 0.2em 0.5em var(--PriColour); */
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: var(--PriColour) !important;
+}
+
+
