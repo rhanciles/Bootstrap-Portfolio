@@ -278,5 +278,37 @@ nav.fill ul li a:hover:after {
 }
 
 footer {
-  margin: -3em 10%;
+  margin-top: -2em;
 }
+
+.txt-end {
+  display: flex;
+  gap: 1em;
+  background-color: var(--PriColour);
+  color: var(--NavColour);
+  padding-left: 10%;
+}
+
+input {
+  background-color: #f3f0f0b6 !important;
+}
+
+.contact-info {
+  width: 25em;
+  padding: 1.5em 7em 0 0;
+  background-color: var(--SecColour);
+}
+
+span ul {
+  list-style: none;
+  color: var(--NavColour);
+}
+
+span li a {
+  color: var(--AltColour);
+}
+
+span li a:hover {
+  color: var(--Highlight);
+}
+
