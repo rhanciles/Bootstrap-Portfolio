@@ -5,7 +5,7 @@
     --AltColour: #293EA1;
     --Highlight: #ffea8b;
     --TxtColour: #1E2846;
-    --BkgColour: #f3f0f0;
+    --BkgColour: #f8f4f4;
     --NavColour: #ffffff;
     --BoxShadow: #5a456813;
     --CrdColour: #c497963b;
@@ -89,8 +89,8 @@ button:hover {
     box-shadow: 0.2em 0.2em 0.5em var(--PriColour); */
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+/* .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: var(--PriColour) !important;
-}
+} */
 
 
