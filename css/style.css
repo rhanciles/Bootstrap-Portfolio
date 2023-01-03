@@ -75,6 +75,9 @@ h6 {
 
 /* End of header section and text animation */
 
+main > h1 {
+  line-height: 0.5;
+}
 
 /* NAVIGATION immediatly after the headers with sticky top effect from bootstrap */
 
@@ -93,7 +96,7 @@ nav {
   color: var(--NavColour) !important;
   text-align: right;
   font-size: 2em;
-  padding-left: 1.5em;
+  padding-left: 1em;
   width: 15%;
   margin: 0;
 }
@@ -104,7 +107,7 @@ nav {
   position: absolute;
   content: " ";
   height: 100%;
-	width: 25%;
+	width: 24%;
   z-index: -1;
   top: 0;
   left: 0;
@@ -245,6 +248,7 @@ nav.fill ul li a:hover:after {
 
 .about {
   margin-top: 1.7em;
+  margin-bottom: 3em;
   display: inline-block
 }
 
@@ -273,7 +277,12 @@ nav.fill ul li a:hover:after {
   margin-right: 1em;
 }
 
+.nav-pills {
+  margin-top: 1.5em;
+}
+
 /* End of Tab Navigation */
+
 
 /* Various ajustments to the footer area */
 
@@ -325,4 +334,37 @@ footer li a {
 footer li a:hover {
   color: var(--Highlight);
 }
+
+/* Media query */
+
+@media only screen and (max-width: 768px){
+  nav { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar-brand {
+    background-color: var(--PriColour);
+    padding: 0;
+    width: auto;
+  }
+  .about .card-title {
+    position: inherit;
+    margin-top: 1em;
+    margin-left: 0;
+  }
+  .about p {
+    margin-left: 0;
+  }
+  .contact-info {
+    width: auto;
+    padding: 1em 0.5em 0;
+  }
+  .social-end {
+    flex-wrap: wrap;
+  }
+  .txt-end {
+    padding-left: 1em;
+    gap: 0;
+  }
 
