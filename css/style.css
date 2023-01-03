@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(../images/177606.jpg);
+  background-image: url(../images/Bootstrap-Pfolio.jpg);
   background-size: cover;
 }
 
@@ -12,34 +12,46 @@
 
 /* NAVIGATION */
 nav {
-  width: 105%;
-  margin-left: -15px;
-  background: #fff;
-  opacity: 0.9;
+  width: 100%;
+  /* background: #fff; */
+  /* opacity: 0.9; */
   /* padding: 1em 0; */
-  box-shadow: 0 0.3rem 0 #dedede;
+  box-shadow: 0 0.2rem 0 var(--TxtColour);
 }
 
 .navbar {
   padding: 0;
-  background-color: var(--NavColour) !important;
+  background-color: var(--PriColour) !important;
 }
 
 .navbar-brand {
-  background-color: var(--PriColour);
-  -webkit-transform: skewX(-20deg);
-  color: white !important;
-  text-align: center;
+  background-color: var(--SecColour);
+  color: var(--NavColour) !important;
+  text-align: right;
   font-size: 2em;
-  width: 7em;
+  padding-left: 0.5em;
+  width: 10%;
   margin: 0;
+}
+
+.navbar-brand::after {
+  position: absolute;
+  content: " ";
+  height: 100%;
+	width: 15%;
+  z-index: -1;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  background-color: inherit;
+  transform: skewX(-20deg);
 }
 
 nav ul {
   list-style: none;
   text-align: center;
   margin-bottom: 0em !important;
-  margin-right: 4em;
+  margin-right: 2em;
 }
 nav ul li {
   display: inline-block;
@@ -48,7 +60,7 @@ nav ul li a {
   display: block;
   padding: 0.8em;
   text-decoration: none;
-  color: white;
+  color: var(--NavColour);
   font-weight: 800;
   text-transform: uppercase;
   margin: 0 0.3em;
@@ -59,9 +71,9 @@ nav ul li a:before {
 transition: all 1s;
 }
 
-nav ul li a:hover {
+/* nav ul li a:hover {
   color: #555;
-}
+} */
 
 /* stroke fill effect */
 
@@ -78,7 +90,7 @@ nav.fill ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  background: #aaa;
+  /* background: #aaa; */
   height: 1px;
 }
 
@@ -94,7 +106,7 @@ nav.fill ul li a:after {
 } */
 
 nav.fill ul li a:hover {
-  color: #fff;
+  color: var(--Highlight);
   z-index: 1;
 }
 
@@ -119,7 +131,7 @@ nav.fill ul li a:hover:after {
   100% {
     width: 100%;
     height: 100%;
-    background: #333;
+    background: var(--SecColour);
   }
 }
 
@@ -140,7 +152,7 @@ nav.fill ul li a:hover:after {
   color: #e5e5e5;
   font-size: 2.26rem;
   text-transform: uppercase;
-  height: calc(100vh - 2.2em);
+  height: calc(100vh - 2.1em);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,4 +201,49 @@ nav.fill ul li a:hover:after {
 
 /* End of text animation */
 
+.mb-3 {
+  margin-bottom: 1.5em !important;
+}
 
+.CV {
+  background-color: #c3c9d1;
+  margin-top: 2em;
+}
+
+.btn-one {
+  color: #fff;
+  background-color: var(--PriColour);
+  border-color: var(--PriColour);
+  transform: skewX(-20deg);
+  position: absolute;
+  margin-left: 0.5em;
+  z-index: 1;
+  height: 3rem;
+  padding-top: 0.6rem;
+}
+
+.btn-two {
+  color: #fff;
+  background-color: var(--PriColour);
+  border-color: var(--PriColour);
+  transform: skewX(-20deg);
+  position: absolute;
+  margin-left: -6.8em;
+  margin-top: -0.8em;
+  z-index: 1;
+  height: 3rem;
+  padding-top: 0.6rem
+}
+
+.btn-three {
+  color: #fff;
+  background-color: var(--PriColour);
+  border-color: var(--PriColour);
+  transform: skewX(-20deg);
+  position: absolute;
+  margin-left: -6.8em;
+  margin-top: -0.8em;
+  z-index: 1;
+  height: 3rem;
+  padding-top: 0.6rem
+}
