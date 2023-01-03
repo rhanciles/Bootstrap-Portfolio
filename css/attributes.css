@@ -3,9 +3,12 @@
     --PriColour: #5a4568;
     --SecColour: #c49796;
     --AltColour: #293EA1;
-    --Highlight: #95A6C2;
+    --Highlight: #ffea8b;
     --TxtColour: #1E2846;
-    --BkgColour: #DCE1EB;
+    --BkgColour: #95A6C2;
+    --NavColour: #ffffff;
+    --BoxShadow: #5a456813;
+    --CrdColour: #c497963b;
 
     /* Test standard values */
     --txtsize: 1em;
@@ -18,4 +21,34 @@ body {
   width: 100%;
   font-family: 'Roboto', sans-serif;
   background-color: var(--BkgColour);  
+}
+
+main,
+footer {
+    margin: 5% 10%;
+}
+
+.card {
+    box-shadow: inset 0 -3em 3em var(--BoxShadow), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em var(--PriColour);
+    color: var(--PriColour);
+}
+
+.card-title {
+    font-size: x-large;
+}
+
+.card-text {
+    font-size: small;
+}
+
+.card-footer {
+    margin-left: 6em;
+    background-color: var(--CrdColour);
+}
+
+.text-muted {
+    color: var(--PriColour) !important;
+    font-style: italic;
+    font-size: medium;
 }
