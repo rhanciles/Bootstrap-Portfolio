@@ -28,6 +28,8 @@ footer {
     margin: 5% 10%;
 }
 
+/* Bootstrap cards and buttons */
+
 .card {
     box-shadow: inset 0 -3em 3em var(--BoxShadow), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em var(--PriColour);
@@ -51,4 +53,15 @@ footer {
     color: var(--PriColour) !important;
     font-style: italic;
     font-size: medium;
+}
+
+.btn:hover {
+    background-color: var(--SecColour);
+    border-color: #997675;
+    box-shadow: 0.2em 0.2em 0.5em var(--PriColour);
+}
+
+.btn:active {
+    background-color: var(--SecColour) !important;
+    border-color: #997675 !important;
 }
