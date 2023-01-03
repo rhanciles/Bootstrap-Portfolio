@@ -20,7 +20,7 @@ body {
 
 /* NAVIGATION */
 nav {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   background: #fff;
   opacity: 0.7;
@@ -30,6 +30,7 @@ nav {
 nav ul {
   list-style: none;
   text-align: center;
+  margin-bottom: 0em !important;
 }
 nav ul li {
   display: inline-block;
