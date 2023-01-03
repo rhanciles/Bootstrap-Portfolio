@@ -1,21 +1,85 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
+/* Header Section */
 .cover {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-image: url(../images/Bootstrap-Pfolio.jpg);
+  height: calc(100vh - 3.8em);
   background-size: cover;
 }
+/* Image in flex display */
+.cover img {
+  height: 5em;
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+}
 
-/* Nav Animation courtesy of CodePen - Mahesh Ambure (https://codepen.io/maheshambure21/pen/QwXaRw) */
+h6 {
+  text-align: center;
+  padding-bottom: 2em;
+  font-style: italic;
+  text-transform: capitalize;
+}
 
-/* NAVIGATION */
+/* Removed background from animated text */
+
+.jumbotron {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Text Animation courtesy of CodePen - Carlos Córdova (https://codepen.io/carloscdev/pen/mdBLmwP) */
+
+.containerTX {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  color: #e5e5e5;
+  font-size: 2.26rem;
+  text-transform: uppercase;
+  height: calc(100vh - 2.1em);
+  float: right;
+  padding-bottom: 4em;
+}
+
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+  /* margin-top: 3rem; */
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.24rem;}
+  60% {margin-top: -11.24rem;}
+  70% {margin-top: -5.62rem;}
+  80% {margin-top: -5.62rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+
+/* End of header section and text animation */
+
+
+/* NAVIGATION immediatly after the headers with sticky top effect from bootstrap */
+
 nav {
   width: 100%;
-  /* background: #fff; */
-  /* opacity: 0.9; */
-  /* padding: 1em 0; */
   box-shadow: 0 0.2rem 0 var(--TxtColour);
 }
 
@@ -29,18 +93,21 @@ nav {
   color: var(--NavColour) !important;
   text-align: right;
   font-size: 2em;
-  padding-left: 0.5em;
-  width: 10%;
+  padding-left: 1.5em;
+  width: 15%;
   margin: 0;
 }
+
+/* Nav Animation courtesy of CodePen - Mahesh Ambure (https://codepen.io/maheshambure21/pen/QwXaRw) */
 
 .navbar-brand::after {
   position: absolute;
   content: " ";
   height: 100%;
-	width: 15%;
+	width: 25%;
   z-index: -1;
   top: 0;
+  left: 0;
   display: flex;
   justify-content: flex-start;
   background-color: inherit;
@@ -51,7 +118,7 @@ nav ul {
   list-style: none;
   text-align: center;
   margin-bottom: 0em !important;
-  margin-right: 2em;
+  padding-left: 0;
 }
 nav ul li {
   display: inline-block;
@@ -71,12 +138,6 @@ nav ul li a:before {
 transition: all 1s;
 }
 
-/* nav ul li a:hover {
-  color: #555;
-} */
-
-/* stroke fill effect */
-
 nav.fill ul li a {
   position: relative;
 }
@@ -90,20 +151,8 @@ nav.fill ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  /* background: #aaa; */
   height: 1px;
 }
-
-/* nav.fill ul li a {
-  transition: all 1s;
-} */
-
-/* nav.fill ul li a:after {
-  text-align: left;
-  content: '.';
-  margin: 0;
-  opacity: 0;
-} */
 
 nav.fill ul li a:hover {
   color: var(--Highlight);
@@ -114,7 +163,6 @@ nav.fill ul li a:hover:after {
   z-index: -10;
   animation: fill 1s forwards;
   -webkit-animation: fill 0.6s forwards;
-  /* -moz-animation: fill 1s forwards; */
   opacity: 1;
 }
 
@@ -137,98 +185,7 @@ nav.fill ul li a:hover:after {
 
 /* End of Nav animation */
 
-
-/* Text Animation courtesy of CodePen - Carlos Córdova (https://codepen.io/carloscdev/pen/mdBLmwP) */
-
-/* p {
-  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
-} */
-
-.jumbotron {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.containerTX {
-  color: #e5e5e5;
-  font-size: 2.26rem;
-  text-transform: uppercase;
-  height: calc(100vh - 2.1em);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.animation {
-  height:50px;
-  overflow:hidden;
-  margin-left: 1rem;
-  /* margin-top: 3rem; */
-}
-
-.animation > div > div {
-  padding: 0.25rem 0.75rem;
-  height:2.81rem;
-  margin-bottom: 2.81rem;
-  display:inline-block;
-}
-
-.animation div:first-child {
-  animation: text-animation 8s infinite;
-}
-
-/* .first div {
-  background-color:#20a7d8;
-}
-.second div {
-  background-color:#CD921E;
-}
-.third div {
-  background-color:#c10528;
-} */
-
-@keyframes text-animation {
-  0% {margin-top: 0;}
-  10% {margin-top: 0;}
-  20% {margin-top: -5.62rem;}
-  30% {margin-top: -5.62rem;}
-  40% {margin-top: -11.24rem;}
-  60% {margin-top: -11.24rem;}
-  70% {margin-top: -5.62rem;}
-  80% {margin-top: -5.62rem;}
-  90% {margin-top: 0;}
-  100% {margin-top: 0;}
-}
-
-/* End of text animation */
-
-.mb-3 {
-  margin-bottom: 1.7em !important;
-}
-
-.CV {
-  background-color: #a1949427;
-  margin-top: 1.7em;
-}
-
-.about {
-  margin-top: 1.7em;
-  display: inline-block
-}
-
-.about .card-title {
-  position: relative;
-  margin-left: 6.5em;
-  margin-top: -6em;
-}
-
-.about p {
-  margin-left: 12em;
-}
-
-.about img {
-  height: 10em;
-  border-radius: 50%;
-}
+/* Buttons for the work/Profile area */
 
 .btn-one {
   color: #fff;
@@ -273,10 +230,99 @@ nav.fill ul li a:hover:after {
   padding-right: 1.5em;
 }
 
-.tab-content {
-  margin-top: 1em;
+/* End of Work area */
+
+/* Adjustments to About Me section */
+
+.mb-3 {
+  margin-bottom: 1.7em !important;
 }
 
-footer {
-  margin: -3em 10%;
+.CV {
+  background-color: #a1949427;
+  margin-top: 1.7em;
 }
+
+.about {
+  margin-top: 1.7em;
+  display: inline-block
+}
+
+.about .card-title {
+  position: relative;
+  margin-left: 6.5em;
+  margin-top: -6em;
+}
+
+.about p {
+  margin-left: 12em;
+}
+
+.about img {
+  height: 10em;
+  border-radius: 50%;
+}
+
+/* End of About Me section */
+
+
+/* Bootstrap Tab Navigation used for skills section */
+
+.tab-content {
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+/* End of Tab Navigation */
+
+/* Various ajustments to the footer area */
+
+footer {
+  margin-top: -2em;
+}
+
+.txt-end {
+  display: flex;
+  gap: 1em;
+  background-color: var(--PriColour);
+  color: var(--NavColour);
+  padding-left: 10%;
+}
+
+input {
+  background-color: #f3f0f0b6 !important;
+}
+
+.contact-info {
+  width: 25em;
+  padding: 1.5em 7em 0 0;
+  background-color: var(--SecColour);
+}
+
+.social-end {
+  display: flex;
+  margin: 0 1.5em 0 0;
+  gap: 2em;
+}
+
+.txt-fix {
+  margin-left: -1.3em;
+}
+
+span ul li:last-child {
+  margin-top: 0.5em;
+}
+
+footer ul {
+  list-style: none;
+  color: var(--NavColour);
+}
+
+footer li a {
+  color: var(--AltColour);
+}
+
+footer li a:hover {
+  color: var(--Highlight);
+}
+
